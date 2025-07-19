@@ -1,0 +1,77 @@
+{
+  "name": "image-alt-title-generator",
+  "version": "1.0.1",
+  "description": "Automatically generate meaningful alt and title attributes for images in web projects at build time - works with React, Vue, Angular, vanilla HTML and more",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eyupomer/image-alt-title-generator.git"
+  },
+  "homepage": "https://github.com/eyupomer/image-alt-title-generator#readme",
+  "bugs": {
+    "url": "https://github.com/eyupomer/image-alt-title-generator/issues"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "image",
+    "alt",
+    "title",
+    "accessibility",
+    "seo",
+    "automation",
+    "babel-plugin",
+    "vite-plugin",
+    "webpack-loader",
+    "build-time",
+    "react",
+    "vue",
+    "angular",
+    "html",
+    "javascript",
+    "typescript",
+    "framework-agnostic"
+  ],
+  "author": "Eyüp Ömer Odabaşı",
+  "license": "MIT",
+  "peerDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/parser": "^7.0.0",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/traverse": "^7.0.0",
+    "@babel/types": "^7.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@types/jest": "^29.0.0",
+    "@types/lodash": "^4.17.20",
+    "@types/react": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^30.0.4",
+    "rollup": "^3.0.0",
+    "rollup-plugin-dts": "^5.0.0",
+    "ts-jest": "^29.0.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.0",
+    "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
