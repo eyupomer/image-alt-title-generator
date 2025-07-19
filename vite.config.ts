@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import imageAltGenerator from 'image-alt-title-generator/vite'
+import { imageAltGenerator } from 'image-alt-title-generator'
 
 // https://vitejs.dev/config/
 export default defineConfig({

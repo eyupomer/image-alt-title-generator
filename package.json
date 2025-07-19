@@ -1,7 +1,7 @@
 {
   "name": "image-alt-title-generator",
-  "version": "1.0.2",
-  "description": "Automatically generate meaningful alt and title attributes for images in web projects at build time - works with React, Vue, Angular, vanilla HTML and more",
+  "version": "1.0.3",
+  "description": "Automatically generate meaningful alt and title attributes for images in Vite projects at build time - works with React, Vue, Angular, Svelte, vanilla HTML and more",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -31,7 +31,6 @@
     "accessibility",
     "seo",
     "automation",
-    "babel-plugin",
     "vite-plugin",
     "webpack-loader",
     "build-time",
@@ -47,10 +46,6 @@
   "license": "MIT",
   "peerDependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/parser": "^7.0.0",
-    "@babel/traverse": "^7.0.0",
-    "@babel/types": "^7.0.0",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@rollup/plugin-typescript": "^11.0.0",

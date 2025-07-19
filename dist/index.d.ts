@@ -1,4 +1,3 @@
-import { PluginObj } from '@babel/core';
 import { Plugin } from 'vite';
 
 interface ImageNameParserOptions {
@@ -34,17 +33,6 @@ declare class ImageNameParser {
 }
 declare const defaultParser: ImageNameParser;
 
-interface BabelPluginOptions {
-    parserOptions?: ImageNameParserOptions;
-    include?: string[];
-    exclude?: string[];
-    generateTitle?: boolean;
-    generateAlt?: boolean;
-    fallbackAlt?: string;
-    fallbackTitle?: string;
-}
-declare function imageAltGeneratorPlugin(babel: any, options?: BabelPluginOptions): PluginObj;
-
 interface WebpackLoaderOptions {
     parserOptions?: ImageNameParserOptions;
     generateTitle?: boolean;
@@ -68,10 +56,9 @@ declare function imageAltGeneratorVitePlugin(options?: VitePluginOptions): Plugi
 declare const imageAltTitleGenerator: {
     ImageNameParser: typeof ImageNameParser;
     defaultParser: ImageNameParser;
-    babelPlugin: typeof imageAltGeneratorPlugin;
     webpackLoader: typeof imageAltGeneratorLoader;
     vitePlugin: typeof imageAltGeneratorVitePlugin;
 };
 //# sourceMappingURL=index.d.ts.map
 
-export { BabelPluginOptions, ImageNameParser, ImageNameParserOptions, VitePluginOptions, WebpackLoaderOptions, imageAltGeneratorPlugin as babelPlugin, imageAltTitleGenerator as default, defaultParser, imageAltGeneratorVitePlugin as imageAltGenerator, imageAltGeneratorVitePlugin as vitePlugin, imageAltGeneratorLoader as webpackLoader };
+export { ImageNameParser, ImageNameParserOptions, VitePluginOptions, WebpackLoaderOptions, imageAltTitleGenerator as default, defaultParser, imageAltGeneratorVitePlugin as imageAltGenerator, imageAltGeneratorVitePlugin as vitePlugin, imageAltGeneratorLoader as webpackLoader };

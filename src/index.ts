@@ -3,9 +3,6 @@ export { ImageNameParser, defaultParser } from './utils/imageNameParser';
 export type { ImageNameParserOptions } from './utils/imageNameParser';
 
 // Build-time plugins (Framework-agnostic)
-export { default as babelPlugin } from './babel-plugin';
-export type { BabelPluginOptions } from './babel-plugin';
-
 export { default as webpackLoader } from './webpack-loader';
 export type { WebpackLoaderOptions } from './webpack-loader';
 
@@ -14,7 +11,6 @@ export type { VitePluginOptions } from './vite-plugin';
 
 // Import the actual modules for default export
 import { ImageNameParser, defaultParser } from './utils/imageNameParser';
-import babelPlugin from './babel-plugin';
 import webpackLoader from './webpack-loader';
 import vitePlugin from './vite-plugin';
 
@@ -22,7 +18,6 @@ import vitePlugin from './vite-plugin';
 const imageAltTitleGenerator = {
   ImageNameParser,
   defaultParser,
-  babelPlugin,
   webpackLoader,
   vitePlugin,
 };

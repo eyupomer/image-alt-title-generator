@@ -1,12 +1,13 @@
 # Image Alt Title Generator
 
-Automatically generate meaningful `alt` and `title` attributes for images in web projects at build time, improving accessibility and SEO without requiring developers to manually add these attributes. Works with React, Vue, Angular, Svelte, vanilla HTML, and any other web framework.
+Automatically generate meaningful `alt` and `title` attributes for images in Vite projects at build time, improving accessibility and SEO without requiring developers to manually add these attributes. Works with React, Vue, Angular, Svelte, vanilla HTML, and any other web framework.
 
 ## Features
 
 - 🚀 **Build-time processing**: Automatically processes all `img` tags during build
 - 🎯 **Smart parsing**: Converts image filenames into meaningful, human-readable descriptions
-- 🔧 **Multiple build systems**: Supports Vite, Webpack, and Babel
+- ⚡ **Vite optimized**: Built specifically for Vite projects
+- 🔧 **Webpack support**: Also works with Webpack projects
 - ⚙️ **Flexible configuration**: Customizable parsing options and fallbacks
 - 🛡️ **Safe**: Only processes images without existing alt/title attributes
 - 📦 **Zero runtime overhead**: All processing happens at build time
@@ -20,34 +21,7 @@ npm install image-alt-title-generator
 
 ## Quick Start
 
-### 1. Babel Plugin (Recommended for most projects)
-
-Add to your `.babelrc` or `babel.config.js`:
-
-```javascript
-module.exports = {
-  presets: ['@babel/preset-react'], // or any other preset you use
-  plugins: [
-    ['image-alt-title-generator/babel', {
-      parserOptions: {
-        prefix: 'Photo of',
-        suffix: 'image',
-        removeNumbers: true,
-        customMappings: {
-          'logo': 'Company Logo',
-          'avatar': 'User Avatar Image'
-        }
-      },
-      generateTitle: true,
-      generateAlt: true,
-      fallbackAlt: 'Image',
-      fallbackTitle: 'Image'
-    }]
-  ]
-};
-```
-
-### 2. Vite Plugin
+### Vite Plugin (Recommended)
 
 Add to your `vite.config.ts`:
 
@@ -83,7 +57,7 @@ export default defineConfig({
 import { vitePlugin as imageAltGenerator } from 'image-alt-title-generator'
 ```
 
-### 3. Webpack Loader
+### Webpack Loader
 
 Add to your `webpack.config.js`:
 
@@ -204,7 +178,7 @@ Images with existing `alt` or `title` attributes will not be modified:
   ```
 
 **Why?**
-- The Babel (and Vite/Webpack) plugins operate at build time and only see the code structure, not the actual values of variables.
+- The Vite plugin operates at build time and only see the code structure, not the actual values of variables.
 - When you use a variable for `src` (e.g., `src={viteLogo}`), the plugin cannot determine the file path or name, so it cannot generate a meaningful `alt` or `title`.
 - This is a technical limitation of how static code analysis works in build tools.
 
@@ -288,15 +262,6 @@ If you're migrating from the old `react-image-alt-generator` package:
 2. **Update your configuration files:**
    - Change `react-image-alt-generator` to `image-alt-title-generator` in your config files
    - The API remains the same, so no other changes are needed
-
-3. **Update imports (if any):**
-   ```javascript
-   // Old
-   import { useImageAlt } from 'react-image-alt-generator';
-   
-   // New
-   import { useImageAlt } from 'image-alt-title-generator';
-   ```
 
 ## Contributing
 
