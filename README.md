@@ -1,6 +1,6 @@
 # Image Alt Title Generator
 
-Automatically generate meaningful `alt` and `title` attributes for images in Vite projects at build time, improving accessibility and SEO without requiring developers to manually add these attributes. Works with React, Vue, Angular, Svelte, vanilla HTML, and any other web framework.
+Automatically generate meaningful `alt` and `title` attributes for images in Vite projects at build time, improving accessibility and SEO without requiring developers to manually add these attributes. Works with React, Vue, Svelte, vanilla HTML, and any other web framework.
 
 ## Features
 
@@ -134,16 +134,7 @@ module.exports = {
 <img src="/images/logo.png" alt="Company Logo" title="Company Logo" />
 ```
 
-### Angular
-```html
-<!-- Before build -->
-<img src="/assets/images/dashboard.png" />
-<img src="/assets/images/user-avatar.jpg" />
 
-<!-- After build -->
-<img src="/assets/images/dashboard.png" alt="Photo of Dashboard image" title="Photo of Dashboard image" />
-<img src="/assets/images/user-avatar.jpg" alt="Photo of User Avatar image" title="Photo of User Avatar image" />
-```
 
 **⚠️ Important: Correct HTML/JSX Syntax**
 Make sure your `img` tags use proper syntax. The attributes should be inside the opening tag:
@@ -244,24 +235,12 @@ This library works with any web framework that uses standard HTML `<img>` tags:
 
 - ✅ **React** (JSX/TSX)
 - ✅ **Vue** (.vue files)
-- ✅ **Angular** (HTML templates)
+
 - ✅ **Svelte** (.svelte files)
 - ✅ **Vanilla HTML**
 - ✅ **Any other framework** that outputs HTML
 
-## Migration from react-image-alt-generator
 
-If you're migrating from the old `react-image-alt-generator` package:
-
-1. **Install the new package:**
-   ```bash
-   npm uninstall react-image-alt-generator
-   npm install image-alt-title-generator
-   ```
-
-2. **Update your configuration files:**
-   - Change `react-image-alt-generator` to `image-alt-title-generator` in your config files
-   - The API remains the same, so no other changes are needed
 
 ## Contributing
 
