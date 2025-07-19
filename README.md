@@ -1,4 +1,4 @@
-# Web Image Alt Generator
+# Image Alt Title Generator
 
 Automatically generate meaningful `alt` and `title` attributes for images in web projects at build time, improving accessibility and SEO without requiring developers to manually add these attributes. Works with React, Vue, Angular, Svelte, vanilla HTML, and any other web framework.
 
@@ -262,42 +262,6 @@ const parser = new ImageNameParser({
 
 const result = parser.parseImageName('user-profile.jpg');
 console.log(result); // "Photo of User Profile image"
-```
-
-### useImageAlt Hook (React only)
-
-React hook for generating alt text at runtime:
-
-```javascript
-import { useImageAlt } from 'image-alt-title-generator';
-
-function MyComponent() {
-  const altText = useImageAlt('/images/user-profile.jpg', {
-    prefix: 'Photo of',
-    suffix: 'image'
-  });
-
-  return <img src="/images/user-profile.jpg" alt={altText} />;
-}
-```
-
-### SmartImage Component (React only)
-
-React component that automatically generates alt and title:
-
-```jsx
-import { SmartImage } from 'image-alt-title-generator';
-
-function MyComponent() {
-  return (
-    <SmartImage 
-      src="/images/logo.png"
-      parserOptions={{
-        customMappings: { 'logo': 'Company Logo' }
-      }}
-    />
-  );
-}
 ```
 
 ## Framework Support

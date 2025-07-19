@@ -1,5 +1,3 @@
-import * as React from 'react';
-import React__default from 'react';
 import { PluginObj } from '@babel/core';
 import { Plugin } from 'vite';
 
@@ -36,31 +34,6 @@ declare class ImageNameParser {
 }
 declare const defaultParser: ImageNameParser;
 
-interface UseImageAltOptions {
-    parserOptions?: ImageNameParserOptions;
-    customParser?: ImageNameParser;
-    fallbackAlt?: string;
-    fallbackTitle?: string;
-    generateTitle?: boolean;
-    generateAlt?: boolean;
-}
-interface UseImageAltReturn {
-    alt: string;
-    title: string;
-    generatedText: string;
-}
-declare const useImageAlt: (src: string, options?: UseImageAltOptions) => UseImageAltReturn;
-
-interface SmartImageProps extends React__default.ImgHTMLAttributes<HTMLImageElement> {
-    parserOptions?: ImageNameParserOptions;
-    customParser?: ImageNameParser;
-    fallbackAlt?: string;
-    fallbackTitle?: string;
-    generateTitle?: boolean;
-    generateAlt?: boolean;
-}
-declare const SmartImage: React__default.ForwardRefExoticComponent<SmartImageProps & React__default.RefAttributes<HTMLImageElement>>;
-
 interface BabelPluginOptions {
     parserOptions?: ImageNameParserOptions;
     include?: string[];
@@ -92,9 +65,7 @@ interface VitePluginOptions {
 }
 declare function imageAltGeneratorVitePlugin(options?: VitePluginOptions): Plugin;
 
-declare const webImageAltGenerator: {
-    SmartImage: React.ForwardRefExoticComponent<SmartImageProps & React.RefAttributes<HTMLImageElement>>;
-    useImageAlt: (src: string, options?: UseImageAltOptions) => UseImageAltReturn;
+declare const imageAltTitleGenerator: {
     ImageNameParser: typeof ImageNameParser;
     defaultParser: ImageNameParser;
     babelPlugin: typeof imageAltGeneratorPlugin;
@@ -103,4 +74,4 @@ declare const webImageAltGenerator: {
 };
 //# sourceMappingURL=index.d.ts.map
 
-export { BabelPluginOptions, ImageNameParser, ImageNameParserOptions, SmartImage, SmartImageProps, UseImageAltOptions, UseImageAltReturn, VitePluginOptions, WebpackLoaderOptions, imageAltGeneratorPlugin as babelPlugin, webImageAltGenerator as default, defaultParser, imageAltGeneratorVitePlugin as imageAltGenerator, useImageAlt, imageAltGeneratorVitePlugin as vitePlugin, imageAltGeneratorLoader as webpackLoader };
+export { BabelPluginOptions, ImageNameParser, ImageNameParserOptions, VitePluginOptions, WebpackLoaderOptions, imageAltGeneratorPlugin as babelPlugin, imageAltTitleGenerator as default, defaultParser, imageAltGeneratorVitePlugin as imageAltGenerator, imageAltGeneratorVitePlugin as vitePlugin, imageAltGeneratorLoader as webpackLoader };
