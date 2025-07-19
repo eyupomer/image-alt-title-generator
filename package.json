@@ -1,6 +1,6 @@
 {
   "name": "image-alt-title-generator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Automatically generate meaningful alt and title attributes for images in Vite projects at build time - works with React, Vue, Svelte, vanilla HTML and more",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -11,9 +11,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/eyupomer/image-alt-title-generator.git"
+    "url": "https://github.com/eyupomer/image-alt-title-generator#readme"
   },
-  "homepage": "https://github.com/eyupomer/image-alt-title-generator#readme",
+  "homepage": "https://www.image-alt-title-generator.com/",
   "bugs": {
     "url": "https://github.com/eyupomer/image-alt-title-generator/issues"
   },
